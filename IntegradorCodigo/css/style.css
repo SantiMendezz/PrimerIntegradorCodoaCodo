@@ -1,0 +1,210 @@
+:root {
+    --negro: #000000;
+    --blanco: #ffffff;
+
+    --gris: #817471;
+    --negroGrisaseo: #252120;
+
+    --verde: #328427;
+    --amarillo: #F3F01A;
+    --celeste: #1AF3E6;
+    --rojo: #F3241A;
+}
+
+/* Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 3.8rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+a {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1.2rem;
+}
+
+/* Utilidades */
+.centrar {
+    text-align: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+/* Navegador */
+.imagen-nav {
+    height: 4rem;
+    width: 8rem;
+}
+
+.bg-color {
+    background-color: var(--negroGrisaseo)!important;
+}
+
+@media (min-width: 992px) {
+    .nav-enlaces {
+        display: flex!important;
+        justify-content: flex-end!important;
+    }
+}
+
+.nav-active {
+    color: var(--blanco)!important;
+}
+
+.a-verde {
+    color: var(--verde)!important;
+}
+
+.a-gris {
+    color: var(--gris)!important;
+}
+.a-gris:hover{
+    color: var(--amarillo)!important;
+}
+
+/* Carrusel */
+.item1, .item2, .item3 {
+    height:55rem;
+    background-color: rgb(35, 36, 36);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+}
+.item1 {
+    background-image: url(../img/ba1.jpg);
+}
+.item2 {
+    background-image: url(../img/ba2.jpg);
+}
+.item3 {
+    background-image: url(../img/ba3.jpg);
+}
+
+.dis-carrusel {
+    text-align: end!important;
+    align-items: end!important;
+}
+
+.botones-carrusel {
+    display: flex;
+    justify-content: flex-end;
+}
+.button-transparente {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    border: solid 0.1rem;
+    border-radius: 0.5rem;
+    border-color: var(--blanco);
+    color: var(--blanco);
+}
+.button-verde {
+    background-color: var(--verde);
+    color: var(--blanco);
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.2rem;
+    margin-left: 1rem;
+}
+
+/* Oradores */
+.cont-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    place-items: center;
+    width: min(65%, 100rem);
+    margin: 0 auto;
+}
+
+@media (max-width: 1080px) {
+    .cont-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Bs As Octubre */
+.buenos-aires {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    height: 40rem;
+}
+
+@media (max-width: 768px) {
+    .buenos-aires {
+        grid-template-columns: 1fr;
+    }
+    .buenos-aires-img {
+        height: 40rem;
+        width: 100%;
+    }
+    .buenos-aires-texto {
+        height: 40rem;
+        width: 100%;
+    }
+}
+
+.buenos-aires img {
+    height: 40rem;
+    width: 100%;
+}
+
+.buenos-aires-texto {
+    background-color: var(--negroGrisaseo);
+    color: var(--blanco);
+}
+
+/* Footer */
+.footer {
+    background: rgb(46,55,152);
+    background: linear-gradient(90deg, rgba(46,55,152,1) 26%, rgba(7,9,45,1) 95%);
+    height: 6rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 10rem;
+        flex-direction: row;
+    }
+}
+
+.enlace-footer {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.enlace-footer:hover{
+    color: var(--negro);
+}
