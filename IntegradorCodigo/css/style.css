@@ -9,12 +9,15 @@
     --amarillo: #F3F01A;
     --celeste: #1AF3E6;
     --rojo: #F3241A;
+
+    --fuentePrincipal:'Poppins', sans-serif;
 }
 
 /* Globales */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: var(--fuentePrincipal);
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -25,10 +28,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
+    font-size: 5.2rem;
+}
+h2 {
     font-size: 4.8rem;
 }
 h3 {
-    font-size: 3.8rem;
+    font-size: 4.2rem;
 }
 
 p{
@@ -45,12 +51,13 @@ button {
 
 /* Utilidades */
 .centrar {
-    text-align: center;
-    align-items: center;
+    text-align: center!important;
+    align-items: center!important;
+    justify-content: center!important;
 }
 
 .contenedor {
-    width: min(90%, 120rem);
+    width: min(90%, 82rem);
     margin: 0 auto;
 }
 
@@ -153,7 +160,6 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
-    height: 40rem;
 }
 
 @media (max-width: 768px) {
@@ -178,25 +184,42 @@ button {
 .buenos-aires-texto {
     background-color: var(--negroGrisaseo);
     color: var(--blanco);
+    height: 40rem;
+    width: 100%;
+}
+
+/* Formulario */
+.boton-form {
+    width: 80rem;
+    height: 4rem!important;
+    font-size: 2.2rem;
+}
+
+@media (max-width: 969px) {
+    .boton-form {
+        width: 20rem;
+    }
 }
 
 /* Footer */
 .footer {
     background: rgb(46,55,152);
     background: linear-gradient(90deg, rgba(46,55,152,1) 26%, rgba(7,9,45,1) 95%);
-    height: 6rem;
     width: 100%;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
-    flex-wrap: wrap
+    gap: 10rem;
+    flex-wrap: wrap;
+    padding: 4rem;
 }
 
 @media (max-width: 768px) {
     .footer {
-        margin-top: 10rem;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
     }
 }
 
