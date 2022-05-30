@@ -5,7 +5,10 @@
     --gris: #817471;
     --negroGrisaseo: #252120;
 
+    --azul: #156edc;
+    --azulClaro: #108ce4;
     --verde: #328427;
+    --verdeClaro: #2aba17;
     --amarillo: #F3F01A;
     --celeste: #1AF3E6;
     --rojo: #F3241A;
@@ -48,6 +51,9 @@ a {
 button {
     font-size: 1.2rem;
 }
+label {
+    font-size: 1.5rem;
+}
 
 /* Utilidades */
 .centrar {
@@ -84,6 +90,10 @@ button {
 
 .a-verde {
     color: var(--verde)!important;
+}
+
+.nav-active-verde {
+    color: var(--verdeClaro)!important;
 }
 
 .a-gris {
@@ -230,4 +240,48 @@ button {
 
 .enlace-footer:hover{
     color: var(--negro);
+}
+
+/* Tipos y descuentos */
+.tiposYDescuentos {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+}
+
+@media (max-width: 468px) {
+    .tiposYDescuentos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }    
+}
+
+.tipos-estudiante {
+    border: 1px solid var(--azul);
+    padding: 2rem;
+}
+.tipos-trainee {
+    border: 1px solid var(--celeste);
+    padding: 2rem;
+}
+.tipos-junior {
+    border: 1px solid var(--amarillo);
+    padding: 2rem;
+}
+
+.totalPagar {
+    background-color: var(--azulClaro);
+    border: 1px solid;
+    border-radius: 0.5rem;
+    border-color: var(--azul);
+}
+.botonesPrecios {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.mb-20 {
+    margin-bottom: 20rem;
 }
